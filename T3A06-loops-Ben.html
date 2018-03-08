@@ -1,26 +1,11 @@
-<h2 align=center>Loops by Benny</h2>
+<h2 align=center>Pixels by Benny</h2>
 
-x = <input id="myText01" type=text value=10 size=4><br>
+<input type=button value="go right" onclick="{ 
 
-<input type=button value="Loop" onclick="{
-	myTemp = ''
-	myInput = document.getElemetById('myText01').value
-
-	for (myLoop = 1; myLoop <= myInput; myLoop++) {
-	
-	myTemp += myLoop + ',',+ myInput + '<br>'
-}
-
-ver myMinutes2 = new Date();
-myTotal = (myMinutes2 - myMinutes)/1000
-
-myTemp += myMinutes2.getMinutes() + ' min <br> duration = '+
-	myTotal +' seconds <br>' 
-
-	document.getElementById('myDiv01').innerHTML = myTemp
+	document.getElementById('myDiv01').style.left = '200px'
 }">
 
-<div id="myDiv01"></div><br>
+<div id="myDiv01" style="position:absolute;" >o__o</div><br>
 
 <body background="https://wallpapercave.com/wp/wp1895659.jpg">
 

@@ -1,0 +1,85 @@
+<script src="https://unpkg.com/deeplearn@0.4.2/dist/deeplearn.js"> </script> 
+
+<br>  
+    
+<input id="myButton01" type="button" value="Deeplearnjs Version?" onclick="{
+      document.getElementById('myDiv01').innerHTML = 'This version of Deeplearnjs = ' + dl.version                                                           
+}"><br><br>
+
+
+<div id="myDiv01">...</div><br>
+
+
+
+<script>
+                                                                 
+async function myShow1(){                                                             
+
+      const matrixShape = [2, 3];  // 2 rows, 3 columns.
+      const matrix = dl.Array2D.new(matrixShape, [10, 20, 30, 40, 50, 60]);
+      const vector = dl.Array1D.new([0, 1, 2]);
+      const myResult = dl.ENV.math.matrixTimesVector(matrix, vector);
+                                                           
+      document.getElementById('myDiv02').innerHTML = 'Array shape is ' + myResult.shape + ' data is ' + await myResult.data()
+}
+    
+</script>    
+    
+<input id="myButton02" type="button" value="Typical Async Function" onclick="{  
+                                                                 
+   myShow1()   
+                                                                 
+}">
+       
+<div id="myDiv02">...</div><br>
+
+<input id="myButton03" type="button" value="Inline Async" onclick="{
+                                                                 
+   (async function() {
+
+      const matrixShape = [2, 3];  // 2 rows, 3 columns.
+      const matrix = dl.Array2D.new(matrixShape, [10, 20, 30, 40, 50, 60]);
+      const vector = dl.Array1D.new([0, 1, 2]);
+      const myResult = dl.ENV.math.matrixTimesVector(matrix, vector);
+                                                           
+      document.getElementById('myDiv03').innerHTML = 'Array shape is ' + myResult.shape + ' data is ' + await myResult.data()
+
+   })();
+                                                                 
+}">
+
+
+<div id="myDiv03">...</div>
+
+<input type="button" value="Run All" onclick="{
+    myTest01();
+}"><br>
+
+
+// Helper function just formats Matricies nicely on a webpage
+
+// myDiv as a string, myOutTensor as a tensor, myCols as an integer, myTitle as a string
+async function myTensorTable(myDiv, myOutTensor, myCols, myTitle){   
+
+  
+ document.getElementById(myDiv04).innerHTML += myTitle + '<br>'
+
+ const myOutput = await myOutTensor.data()
+ myTemp = '<table border=3><tr>'
+   for (myCount = 0;    myCount <= myOutTensor.size - 1;   myCount++){   
+     myTemp += '<td>'+ myOutput[myCount] + '</td>'
+     if (myCount % myCols == myCols-1){
+         myTemp += '</tr><tr>'
+     }
+   }   
+   myTemp += '</tr></table>'
+   document.getElementById(myDiv04).innerHTML += myTemp + '<br>'
+}
+
+
+<div id="myDiv04">...</div>
+
+<body background="https://wallpapercave.com/wp/wp1895659.jpg">
+
+<style type="text/css">body, a:hover {cursor: url(http://cur.cursors-4u.net/cursors/cur-1/cur68.cur), progress !important;}</style><a href="http://www.cursors-4u.com/cursor/2008/10/23/cur68.html" target="_blank" title="Dance Dance Revolution DDR Blue"><img src="http://cur.cursors-4u.net/cursor.png" border="0" alt="Dance Dance Revolution DDR Blue" style="position:absolute; top: 0px; right: 0px;" /></a>
+

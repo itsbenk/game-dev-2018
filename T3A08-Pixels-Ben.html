@@ -1,11 +1,70 @@
-<h2 align=center>Pixels by Benny</h2>
 
-<input type=button value="go right" onclick="{ 
 
-	document.getElementById('myDiv01').style.left = '200px'
-}">
+<!DOCTYPE html>
+<html>
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
+</style>
+<body>
 
-<div id="myDiv01" style="position:absolute;" >o__o</div><br>
+<p>
+<button onclick="myMove()">Click Me</button>
+</p> 
+
+<div id ="container">
+<div id ="animate"></div>
+</div>
+
+<script>
+function myMove() {
+  var elem = document.getElementById("animate");   
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px';
+      
+    }
+  }
+}
+</script>
+
+<p>
+<button onclick="myMove(2)">Click Me</button>
+</p>
+
+<script>
+function myMove(2) {
+  var elem = document.getElementById("animate");   
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      
+      
+    }
+  }
+}
+</script>
 
 <body background="https://wallpapercave.com/wp/wp1895659.jpg">
 
