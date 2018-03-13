@@ -1,14 +1,105 @@
-<input type= button value="if" onclick="{
-myTemp=''
-x=6
-if (x<7){myTemp+='larger than6'}
-else{myTemp+='less than 6'}
+<h1 align=center>If statements by Ben</h1>
 
-document.getElemetById('myDi01').innerHTML=myTemp
+
+
+<input type=button value="if x < 6" onclick="{
+
+myTemp = ''
+
+x = 6
+
+if (x > 6){ myTemp += 'Greater than 6 <br>' }
+
+else { myTemp += 'Less than 6 <br>' }
+
+document.getElementById('myDiv01').innerHTML = myTemp
 
 }">
 
-<div id="myDiv01></div>
+<button onclick="myFunction()">if time < 6pm</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var hour = new Date().getHours(); 
+    var greeting;
+    if (hour < 18) {
+        greeting = "Good day";
+    } else {
+        greeting = "Good evening";
+    }
+    document.getElementById("demo").innerHTML = greeting;
+}
+</script>
+
+<input type=button value="if x > 6" onclick="{
+
+myTemp = ''
+
+x = 7
+
+if (x > 6){ myTemp += 'Greater than 6 <br>' }
+
+else { myTemp += 'Less than 6 <br>' }
+
+document.getElementById('myDiv01').innerHTML = myTemp
+
+}">
+
+<button onclick="checkNumber ()">check number</button>
+
+<script type="text/javascript">
+
+function checkNumber () {
+var n = prompt("Enter a number", "5");
+var entered = "You entered a number between"; 
+
+if (n >= 1 && n < 10)                   
+  {alert(entered + " 0 and 10")}
+else if (n >= 10 && n < 20)
+  {alert(entered + " 9 and 20")}
+else if (n >= 20 && n < 30)
+  {alert(entered + " 19 and 30")}
+else if (n >= 30 && n < 40)
+  {alert(entered + " 29 and 40")}
+else if (n >= 40 && n <= 100)
+  {alert(entered + " 39 and 100")}
+else if (n < 1 || n > 100)
+  {alert("You entered a number less than 1 or greater than 100")}
+else
+  {alert("You did not enter a number!")}
+}
+
+</script>
+
+<button onclick="flowerPrice ()">check flower price</button>
+
+<script type="text/javascript">
+
+function flowerPrice () {
+var flower = prompt("What flower do you like, type rose, orchild or daisy", "rose"); 
+
+switch (flower)
+{
+  case "rose" : 
+     alert(flower + " costs $2.50");
+     break;
+  case "daisy" : 
+     alert(flower + " costs $1.25");
+     break;
+  case "orchild" : 
+     alert(flower + " costs $1.50");
+     break;
+  default : 
+     alert("There is no such flower in our shop");
+     break;
+}
+}
+</script>
+
+
+<div id="myDiv01"></div>
 
 <body background="https://wallpapercave.com/wp/wp1895659.jpg">
 
