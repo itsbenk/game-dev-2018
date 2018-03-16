@@ -1,0 +1,25 @@
+<script>
+
+class myAnimal {
+   constructor(passName' passAge) {
+      this.myName = passName;
+      this.myAge = passAge;
+  }
+
+  myShow(){
+     document.getElementById('myDiv01').innerHTML += 'Hello '+ this.myName + '<br>'
+  }
+}
+
+
+</script>
+
+<input type=button value="Activate Dog" onclick="{
+
+   myDog = new myAnimal('Snickers', 5)
+   myDog.myShow()
+
+}">
+
+
+<input type=button value="Activate Cat?"
