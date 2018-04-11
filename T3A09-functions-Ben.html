@@ -4,7 +4,8 @@
 <script>
 function myGuardian(myX){
 
-	alert('your ' + myX + ' are dirty')
+	document.getElementById('myDiv01').innerHTML = 'your ' + myX + ' are dirty'
+	
 }
 
 
@@ -19,15 +20,18 @@ function myGuardian(myX){
 }">
 
 <input type=button value="inlie function" onclick="{
-	(function () {
-	  alert('inline works')
-	})()
+
+	document.getElementById('myDiv01').innerHTML = 'inline works' 
+
 }">
 
 
 <input type=button value="where are my shoes" onclick="{
 	myGuardian('Shoes')
 }">
+
+<div id="myDiv01"></div>
+
 
 <body background="https://wallpapercave.com/wp/wp1895659.jpg">
 
