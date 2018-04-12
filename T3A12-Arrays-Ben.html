@@ -18,40 +18,48 @@
 "><br><br>
 
 
+Loop this amount <input type=text id="myText01" size=6 value= 5><br> 
+
+<input type=button value="Run myRandom" onclick=" 
+  
+    myRandomNumber = new Array() 
+  
+  
+    myRandomNumber[0] =  Math.floor(Math.random()*9+1) 
+  
+   myTemp = 0
+   myValue = parseInt(document.getElementById('myText01').value) 
+   
+   for (myLoop=1; myLoop <= myValue; myLoop++){
+  
+    document.getElementById('myDiv02').innerHTML +=  Math.floor(Math.random()*9+1) + ' <br>' 
+  }
+  
+  
+// sort the values 
+    for (myLoop=0; myLoop <= 7; myLoop++ ){ 
+       if (myRandomNumber[myLoop]  > myRandomNumber[myLoop + 1] ){ 
+           myTemp = myRandomNumber[myLoop] // you finish two more lines 
+     
+           
+             
+       } 
+   }   
+  
+  
+  
+// print them again 
+  
+ 
+  
+"><br> 
+
+  
+
+<div id="myDiv02"></div> 
+
+
 <id id="myDiv01"></div>
-
-
-Loop this amount <input type=text id="myText01" size=6 value= 5><br>
-
-<input type=button value="Run myRandom" onclick="
-
-my7 = document.getElementByid('myText01')
-
-myRandomNumber = new Array()
-
-myRandomNumber[0] = Math.floor(Math.random()*9+1)
-
-document.getElementById('myDiv02').innerHTML += myRandomNumber[0] + ' <br>'
-
-// sort the values
-
-for (myLoop=0; myLoop <= 7; myLoop++ ){
-
-    if (myRandomNumber[myLoop] > myRandomNumber[myLoop + 1] ){
-	   myTemp = myRandomNumber[myLoop]
-	   myRandomNumber[myLoop] = myRandomNumber[myLoop+1]
-	   myRandomNumber[myLoop+1] = myTemp
-
-}
-
-}
-
-// print them again
-
-"><br>
-
-
-<div id="myDiv02"></div>
 
 <body background="https://wallpapercave.com/wp/wp1895659.jpg">
 
