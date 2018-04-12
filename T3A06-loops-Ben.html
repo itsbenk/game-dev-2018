@@ -1,9 +1,34 @@
-<h2 align=center>Pixels by Benny</h2>
+<link rel="icon" type="image/png" href="crome.png" sizes="32x32">
+<title>T3A04-Loops-Benny</title>
+<h1 align=center> Loops by Benny </h1>
 
-<input type=button value="go right" onclick="{ 
+Add then number to itself +1 repeat<br><br>
+<textarea id="myArea01"> 4 </textarea><br><br>
 
-	document.getElementById('myDiv01').style.left = '200px'
-}">
+
+
+
+
+
+
+
+
+<input type=button value="click me" onclick="{  
+  myTemp = 0
+  myValue = parseInt(document.getElementById('myArea01').value)
+   document.getElementById('myDiv01').innerHTML = '1 loop = ' + document.getElementById('myArea01').value + '<br>'
+   
+  for (myLoop=2; myLoop <= myValue; myLoop++){
+      
+     myTemp = myValue + 0
+                        
+     document.getElementById('myDiv01').innerHTML += 
+          myLoop + ' loop = ' +myTemp + ' <br>'
+      myValue = parseInt(myTemp)
+     
+  }
+}"><br><br>
+
 
 <div id="myDiv01" style="position:absolute;" >o__o</div><br>
 
