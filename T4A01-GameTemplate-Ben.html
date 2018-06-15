@@ -128,17 +128,26 @@ document.getElementById('myShowDiv3').innerHTML = 'You hit object move2'
 
 if (myHitOther('bullet1','move2')) {
 
-document.getElementById('myShowDiv3').innerHTML = 'The bullet hit move 2'
+{window.location = "final game.html";}
+
+document.getElementById('myShowDiv3').innerHTML = 'you hit move 2'
 
 document.getElementById('bullet1').style.visibility = 'hidden'
 
 document.getElementById('bullet1').style.left = '-200px'
 
-clearInterval(document.myShot)
+clearInterval(document.myShot)       
+
+  
 
 }
 
+
+
 }
+ 
+
+
 
 // ******************** Object Detection finished ************************** -->
 
@@ -208,9 +217,13 @@ document.getElementById('bullet1').style.left = parseInt(document.getElementById
 
 <body background="https://78.media.tumblr.com/ea568d43430e0f881680e5cdb622a1b3/tumblr_inline_n258q4r8c01qhwjx8.png" onload="myTimer = setInterval('myScroll()', 100)" onkeypress="{
 
-if(event.keyCode==97){ document.getElementById('move1').style.left = parseInt(document.getElementById('move1').style.left)-5+'px'} // small 'a' key go left
+if(event.keyCode==97){ document.getElementById('move1').style.left = parseInt(document.getElementById('move1').style.left)-10+'px'} // small 'a' key go left
 
-if(event.keyCode==119){ document.getElementById('move1').style.top = parseInt(document.getElementById('move1').style.top)-5+'px'} // small 'w' key go up
+if(event.keyCode==119){ document.getElementById('move1').style.top = parseInt(document.getElementById('move1').style.top)-10+'px'} // small 'w' key go up
+
+if(event.keyCode==115){ document.getElementById('move1').style.top = parseInt(document.getElementById('move1').style.top)+10+'px'}
+
+if(event.keyCode==100){ document.getElementById('move1').style.left = parseInt(document.getElementById('move1').style.left)+10+'px'}
 
 }">
 
@@ -224,29 +237,26 @@ myBgObject = eval('document.body');
 
 <!-- ******************** Some instructions that magically disappear ************************** -->
 
-<div id="myInstructions" style="visibility:visible; width:500px; background-color:pink" onclick="{
 
-document.getElementById('myInstructions').style.visibility = 'hidden'}
 
-">
+<ol>
 
-<ol>Instructions here:
 
-<li> Make you own game
 
-<li> For this demonstration. click the buttons and the red box
 
-<li> Delete the buttons you do not want in your game.
 
-<li> Look at the code for each button to see how to make buttons for other directions
 
-<li>You might want to use <a href="http://www.online-image-editor.com/">http://www.online-image-editor.com/</a>
+
+
+
 
 </ol>
 
-Click to hide.
+
 
 </div><br>
+
+
 
 <!-- ******************** Following should be all your images ************************** -->
 
